@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageImage from "@/components/PageImage";
 import { Check, Cta, PageHero, Section } from "@/components/Section";
 
 export const metadata: Metadata = { title: "How it works" };
@@ -18,6 +19,7 @@ export default function Page() {
       <PageHero eyebrow="How it works" title="From nomination to return, every step is mapped.">
         The programme follows a fixed sequence of approvals. Nothing moves to the next stage until the one before it is complete and recorded.
       </PageHero>
+      <PageImage file="how-it-works.jpg" alt="Students arriving on a UK university campus with their luggage" />
       <Section>
         <ol className="space-y-5">
           {stages.map(([t, d]) => (

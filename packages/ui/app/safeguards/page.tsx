@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageImage from "@/components/PageImage";
 import { Check, Cta, PageHero, Section } from "@/components/Section";
 
 export const metadata: Metadata = { title: "Safeguards" };
@@ -9,6 +10,7 @@ export default function Page() {
       <PageHero eyebrow="Safeguarding" title="Protecting every student, and being able to prove it.">
         Students travelling abroad are often young adults far from home. The programme is designed so that families, universities and regulators can see exactly how each student is looked after.
       </PageHero>
+      <PageImage file="safeguards.jpg" alt="A programme team member checking in with a student in a bright common room" />
       <Section eyebrow="Before departure" title="Careful selection and agreements.">
         <div className="grid gap-6 md:grid-cols-3">
           {[

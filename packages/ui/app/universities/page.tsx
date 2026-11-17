@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageImage from "@/components/PageImage";
 import { Check, Cta, PageHero, Section } from "@/components/Section";
 
 export const metadata: Metadata = { title: "For universities" };
@@ -9,6 +10,7 @@ export default function Page() {
       <PageHero eyebrow="For universities" title="A vetted international cohort, without the administrative load.">
         We recruit, screen and support students, and look after accommodation and welfare. You deliver the academic experience and welcome them to campus.
       </PageHero>
+      <PageImage file="universities.jpg" alt="Students and a lecturer in a UK university seminar room" />
       <Section eyebrow="Roles" title="A clear division of responsibility.">
         <div className="grid gap-6 md:grid-cols-2">
           <div className="card">

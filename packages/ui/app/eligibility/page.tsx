@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import PageImage from "@/components/PageImage";
 import { Check, Cta, PageHero, Section } from "@/components/Section";
 
 export const metadata: Metadata = { title: "Eligibility" };
@@ -9,6 +10,7 @@ export default function Page() {
       <PageHero eyebrow="Eligibility" title="Who can take part.">
         The programme is for strong final-year students, selected through their own university and with their family’s support.
       </PageHero>
+      <PageImage file="eligibility.jpg" alt="A final-year student preparing documents in a university library" />
       <Section eyebrow="Core requirements" title="What we look for.">
         <div className="grid gap-10 lg:grid-cols-2">
           <ul className="space-y-4">
