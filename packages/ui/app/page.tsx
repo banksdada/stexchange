@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeroVideo from "@/components/HeroVideo";
+import Team from "@/components/Team";
 import { Check, Cta, Section } from "@/components/Section";
 
 const facts = [
@@ -113,6 +114,8 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+      <Team />
 
       <Cta
         title="Ready to find out whether the programme fits you?"
