@@ -1,0 +1,23 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: packages/api/Dockerfile
+    env_file: .env
+    expose:
+      - "8000"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  ui:
+    build:
+      context: .
+      dockerfile: packages/ui/Dockerfile
+    env_file: .env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
