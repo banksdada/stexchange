@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeroVideo from "@/components/HeroVideo";
 import { Check, Cta, Section } from "@/components/Section";
 
 const facts = [
@@ -30,18 +31,20 @@ const safeguards = [
 export default function Home() {
   return (
     <>
-      <section className="relative overflow-hidden bg-navy text-white">
+      <section className="relative isolate overflow-hidden bg-navy text-white">
+        <HeroVideo />
+        {/* Dark gradient keeps the text readable over any video */}
+        <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/80 to-navy/50" />
         <div aria-hidden className="absolute -right-32 -top-32 h-[28rem] w-[28rem] rounded-full bg-gold/10 blur-3xl" />
-        <div aria-hidden className="absolute -bottom-40 left-1/4 h-80 w-80 rounded-full bg-brand/30 blur-3xl" />
-        <div className="container-x relative py-20 sm:py-28">
+        <div className="container-x relative z-10 py-20 sm:py-32">
           <p className="eyebrow">UK Student Exposure Programme</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-extrabold leading-tight !text-white sm:text-6xl">
             Four months in the UK.
             <span className="block text-gold">A degree still waiting at home.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/75">
-            A structured, safeguarded study-and-experience placement at a UK university for final-year Ghanaian students,
-            with vetted accommodation, regular welfare checks and full support from application to return.
+          <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/85">
+            You have worked hard for years. Now see how a UK university really works, in classrooms and lecture halls of your own, with
+            people looking out for you from the day you apply to the day you come home.
           </p>
           <div className="mt-9 flex flex-wrap gap-4">
             <Link href="/contact" className="btn-gold">Register your interest</Link>
