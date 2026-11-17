@@ -16,14 +16,14 @@ export default function PageImage({ file, alt }: { file: string; alt: string }) 
   }, []);
 
   return (
-    <figure className={ok ? "container-x pt-12" : "sr-only"} aria-hidden={!ok}>
+    <figure className={ok ? "container-x max-w-5xl pt-12" : "sr-only"} aria-hidden={!ok}>
       <div className="relative overflow-hidden rounded-2xl shadow-lift">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           ref={ref}
           src={`/images/${file}`}
           alt={ok ? alt : ""}
-          className="aspect-[16/7] w-full object-cover"
+          className="aspect-[16/9] w-full object-cover"
           onLoad={() => setOk(true)}
           onError={() => setOk(false)}
         />
